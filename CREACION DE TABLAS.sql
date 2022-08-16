@@ -20,14 +20,14 @@ CREATE TABLE IF NOT EXISTS ciudades
  apellido VARCHAR (50) NOT NULL,
  telefono VARCHAR (20),
  sexo VARCHAR (30) NOT NULL,
- edad VARCHAR (50) NOT NULL);
+ fecha_nacimiento DATE NOT NULL);
  
  CREATE TABLE IF NOT EXISTS conductores
 (id_conductor INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
  matricula INT NOT NULL,
  nombre VARCHAR (50) NOT NULL,
  apellido VARCHAR (50) NOT NULL,
- edad VARCHAR (50) NOT NULL,
+ fecha_nacimiento DATE NOT NULL,
  telefono VARCHAR (20),
  sexo VARCHAR (30) NOT NULL,
  domicilio VARCHAR (100),
@@ -45,4 +45,5 @@ id_conductor INT NOT NULL,
  FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente),
  fecha DATE NOT NULL DEFAULT (CURRENT_DATE),
  kilometraje INT NOT NULL);
+ 
  
